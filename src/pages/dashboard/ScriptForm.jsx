@@ -9,6 +9,7 @@ import {
   useUpdateScript,
 } from '../../hooks/useScripts'
 import ImageUpload from '../../components/dashboard/ImageUpload'
+import GameSearchPicker from '../../components/dashboard/GameSearchPicker'
 
 const ScriptForm = () => {
   const { id } = useParams()
@@ -61,6 +62,8 @@ const ScriptForm = () => {
 
   const imageKey = watch('imageKey')
   const imageUrl = watch('imageUrl')
+  const targetGame = watch('targetGame')
+  const gameId = watch('gameId')
 
   const onSubmit = async (data) => {
     const payload = {
@@ -146,30 +149,22 @@ const ScriptForm = () => {
           />
         </div>
 
-        {/* Target Game */}
+        {/* Target Game — searches Roblox and auto-fills the universeId */}
         <div>
           <label className="block text-xs font-medium text-muted mb-1.5">
             Target Game
           </label>
-          <input
-            {...register('targetGame')}
-            type="text"
-            placeholder="e.g. Blox Fruits, Arsenal"
-            className="w-full bg-surface border border-edge rounded-sm text-foreground px-3 py-2.5 text-sm focus:border-edge-hover focus:outline-none"
+          <GameSearchPicker
+            value={targetGame}
+            gameId={gameId}
+            onChange={({ name, gameId: id }) => {
+              setValue('targetGame', name, { shouldDirty: true })
+              setValue('gameId', id, { shouldDirty: true })
+            }}
           />
-        </div>
-
-        {/* Game ID */}
-        <div>
-          <label className="block text-xs font-medium text-muted mb-1.5">
-            Game ID
-          </label>
-          <input
-            {...register('gameId')}
-            type="text"
-            placeholder="Roblox Universe ID"
-            className="w-full bg-surface border border-edge rounded-sm text-foreground px-3 py-2.5 text-sm focus:border-edge-hover focus:outline-none"
-          />
+          <p className="text-[11px] text-muted mt-1.5">
+            Universe ID is captured automatically from the selected game.
+          </p>
         </div>
 
         {/* Hub */}
