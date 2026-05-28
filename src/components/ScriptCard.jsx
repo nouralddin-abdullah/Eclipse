@@ -5,16 +5,17 @@ import { Gamepad2, Key } from 'lucide-react'
  * Script card with game thumbnail, game tag (with icon), title, and hub info.
  *
  * Props:
- *   script       – script object (hubId, hasKey)
+ *   script       – script object (hubId, gameId, hasKey)
  *   hubs         – full hubs array
- *   gameData     – { thumbnailUrl, iconUrl } from useGameThumbnails
+ *   gameAssets   – Map<gameId(number), { iconUrl, thumbnailUrl }> from useGameAssetsBatch
  *   onGameFilter – callback(gameName) to filter by game
  */
-const ScriptCard = ({ script, hubs = [], gameData, onGameFilter }) => {
+const ScriptCard = ({ script, hubs = [], gameAssets, onGameFilter }) => {
   const navigate = useNavigate()
   const { title, targetGame, hubId, hasKey } = script
 
   const hub = hubs.find((h) => h.id === hubId)
+  const gameData = script.gameId ? gameAssets?.get(Number(script.gameId)) : null
   // Script's own image takes priority, falls back to Roblox game thumbnail
   const imageUrl = script.imageUrl || gameData?.thumbnailUrl
   const iconUrl = gameData?.iconUrl

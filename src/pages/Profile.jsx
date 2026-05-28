@@ -6,7 +6,7 @@ import { SiDiscord } from '../components/ui/BrandIcons'
 import { useAuthStore } from '../hooks/useAuthStore'
 import { useScripts } from '../hooks/useScripts'
 import { useHubs } from '../hooks/useHubs'
-import { useGameThumbnails } from '../hooks/useGameThumbnails'
+import { useGameAssetsBatch } from '../hooks/useGameAssets'
 import { useFilterStore } from '../hooks/useFilterStore'
 import { deleteMe, exportMyData } from '../lib/api'
 import { toast } from '../hooks/useToastStore'
@@ -33,7 +33,9 @@ const Profile = () => {
     { ids: followedIds.join(','), limit: 100 },
     { enabled: followedIds.length > 0 }
   )
-  const { data: gameThumbnails } = useGameThumbnails()
+  const { data: gameAssets } = useGameAssetsBatch(
+    savedScriptsList.map((s) => s.gameId).filter(Boolean)
+  )
   const { setGameFilter } = useFilterStore()
 
   const [searchParams] = useSearchParams()
@@ -268,7 +270,7 @@ const Profile = () => {
                     key={script.id}
                     script={script}
                     hubs={followedHubsList}
-                    gameData={gameThumbnails?.get(script.targetGame)}
+                    gameAssets={gameAssets}
                     onGameFilter={setGameFilter}
                   />
                 ))}

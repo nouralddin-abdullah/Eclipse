@@ -5,7 +5,7 @@ import { SiDiscord } from '../components/ui/BrandIcons'
 import { useHub, useFollowHub } from '../hooks/useHubs'
 import { useScripts } from '../hooks/useScripts'
 import { useShowcases } from '../hooks/useShowcases'
-import { useGameThumbnails } from '../hooks/useGameThumbnails'
+import { useGameAssetsBatch } from '../hooks/useGameAssets'
 import { useAuthStore } from '../hooks/useAuthStore'
 import Button from '../components/ui/Button'
 import StatusDot from '../components/ui/StatusDot'
@@ -19,7 +19,9 @@ const HubDetail = () => {
   const { data: hub, isLoading: hubLoading } = useHub(hubId)
   const { data: hubScripts = [] } = useScripts({ hubId, limit: 100 })
   const { data: hubShowcases = [] } = useShowcases({ hubId, limit: 100 })
-  const { data: gameThumbnails } = useGameThumbnails()
+  const { data: gameAssets } = useGameAssetsBatch(
+    hubScripts.map((s) => s.gameId).filter(Boolean)
+  )
 
   const { isAuthenticated, signIn, isHubFollowed } = useAuthStore()
   const followMutation = useFollowHub()
@@ -155,7 +157,7 @@ const HubDetail = () => {
                   key={script.id}
                   script={script}
                   hubs={hub ? [hub] : []}
-                  gameData={gameThumbnails?.get(script.targetGame)}
+                  gameAssets={gameAssets}
                 />
               ))}
             </div>

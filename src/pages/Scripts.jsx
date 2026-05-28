@@ -3,6 +3,7 @@ import { motion } from 'motion/react'
 import { useScriptsPaged } from '../hooks/useScripts'
 import { useHubs } from '../hooks/useHubs'
 import { useGameThumbnails } from '../hooks/useGameThumbnails'
+import { useGameAssetsBatch } from '../hooks/useGameAssets'
 import { useFilterStore } from '../hooks/useFilterStore'
 import { useDebouncedValue } from '../hooks/useDebouncedValue'
 import SearchInput from '../components/ui/SearchInput'
@@ -55,6 +56,12 @@ const Scripts = () => {
 
   const scripts = useMemo(() => env?.items ?? [], [env])
   const total = env?.total ?? 0
+
+  const visibleGameIds = useMemo(
+    () => scripts.map((s) => s.gameId).filter(Boolean),
+    [scripts]
+  )
+  const { data: gameAssets } = useGameAssetsBatch(visibleGameIds)
 
   // Local games for the quick-access list — taken from the visible page
   const localGames = useMemo(() => {
@@ -129,7 +136,7 @@ const Scripts = () => {
                   key={script.id}
                   script={script}
                   hubs={hubs}
-                  gameData={gameThumbnails?.get(script.targetGame)}
+                  gameAssets={gameAssets}
                   onGameFilter={onGame}
                 />
               ))}
