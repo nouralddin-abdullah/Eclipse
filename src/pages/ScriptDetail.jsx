@@ -22,7 +22,7 @@ import {
   useIncrementScriptView,
 } from '../hooks/useScripts'
 import { useHub, useFollowHub } from '../hooks/useHubs'
-import { useGameThumbnails } from '../hooks/useGameThumbnails'
+import { useGameAssets } from '../hooks/useGameAssets'
 import { useAuthStore } from '../hooks/useAuthStore'
 import Skeleton from '../components/ui/Skeleton'
 import CodeBlock from '../components/CodeBlock'
@@ -35,7 +35,7 @@ const ScriptDetail = () => {
   const navigate = useNavigate()
   const { data: script, isLoading } = useScript(scriptId)
   const { data: hub } = useHub(script?.hubId)
-  const { data: gameThumbnails } = useGameThumbnails()
+  const { data: gameData } = useGameAssets(script?.gameId)
 
   const {
     isAuthenticated,
@@ -55,8 +55,6 @@ const ScriptDetail = () => {
 
   const bookmarked = isScriptSaved(scriptId)
   const following = script ? isHubFollowed(script.hubId) : false
-
-  const gameData = gameThumbnails?.get(script?.targetGame)
 
   const currentLikes = script?.likes ?? 0
   const currentDislikes = script?.dislikes ?? 0
