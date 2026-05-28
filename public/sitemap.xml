@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!--
+    PLACEHOLDER SITEMAP
+    This will be replaced by a dynamic endpoint served by your backend.
+    Backend endpoint: GET /api/sitemap.xml
+    
+    The backend should:
+    1. Query all hubs, scripts, and showcases from the database
+    2. Generate XML with <url> entries for each resource
+    3. Set Content-Type: application/xml
+    4. Include <lastmod> from each resource's updatedAt timestamp
+  -->
+
+  <!-- Static pages -->
+  <url>
+    <loc>https://eclipserblx.com/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://eclipserblx.com/hubs</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://eclipserblx.com/scripts</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://eclipserblx.com/showcases</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Dynamic: Hubs -->
+  <url><loc>https://eclipserblx.com/hubs/eclipse-core</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eclipserblx.com/hubs/nova-hub</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eclipserblx.com/hubs/phantom-x</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eclipserblx.com/hubs/velocity</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eclipserblx.com/hubs/zenith</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eclipserblx.com/hubs/dark-matter</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Dynamic: Scripts -->
+  <url><loc>https://eclipserblx.com/scripts/auto-farm-blox</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eclipserblx.com/scripts/esp-universal</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eclipserblx.com/scripts/speed-boost</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eclipserblx.com/scripts/infinite-jump</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eclipserblx.com/scripts/aimbot-fps</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eclipserblx.com/scripts/teleport-util</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eclipserblx.com/scripts/auto-collect</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eclipserblx.com/scripts/fly-hack</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+</urlset>

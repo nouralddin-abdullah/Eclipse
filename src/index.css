@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+
+@theme {
+  /* Background layers */
+  --color-ground: #0F1115;
+  --color-surface: #181A20;
+
+  /* Borders */
+  --color-edge: #2A2D35;
+  --color-edge-hover: #3F4452;
+
+  /* Text */
+  --color-foreground: #FFFFFF;
+  --color-muted: #9BA1A6;
+
+  /* Status indicators */
+  --color-online: #34C759;
+  --color-danger: #FF3B30;
+
+  /* Typography */
+  --font-sans: 'Inter Variable', system-ui, -apple-system, sans-serif;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+
+/* ─── Base Styles ─── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ground);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Scrollbar ─── */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ground);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-edge);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-edge-hover);
+}
+
+/* ─── Selection ─── */
+
+::selection {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--color-foreground);
+}
+
+/* ─── Focus ring ─── */
+
+*:focus-visible {
+  outline: 1px solid var(--color-edge-hover);
+  outline-offset: 2px;
+}

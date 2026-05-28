@@ -1,0 +1,118 @@
+[
+  {
+    "id": "c1",
+    "scriptId": "auto-farm-blox",
+    "author": "xDark_Player",
+    "text": "Been using this for 3 days now, no issues at all. The route customization is insane, way better than other farm scripts I've tried.",
+    "date": "2026-05-21",
+    "upvotes": 24,
+    "downvotes": 1,
+    "replies": [
+      {
+        "id": "r1",
+        "author": "EclipseAdmin",
+        "text": "Glad you're enjoying it! v2.5 will add auto-quest support 🔥",
+        "date": "2026-05-21",
+        "upvotes": 15,
+        "downvotes": 0
+      }
+    ]
+  },
+  {
+    "id": "c2",
+    "scriptId": "auto-farm-blox",
+    "author": "FruitGrinder99",
+    "text": "Does this work in Sea 3? I keep getting teleported back.",
+    "date": "2026-05-20",
+    "upvotes": 8,
+    "downvotes": 0,
+    "replies": [
+      {
+        "id": "r2",
+        "author": "xDark_Player",
+        "text": "Yeah set Sea to 3 in the config, auto doesn't always pick the right one yet.",
+        "date": "2026-05-20",
+        "upvotes": 5,
+        "downvotes": 0
+      }
+    ]
+  },
+  {
+    "id": "c3",
+    "scriptId": "auto-farm-blox",
+    "author": "NoobScripter",
+    "text": "Clean code. Easy to modify for custom routes. W script 💯",
+    "date": "2026-05-18",
+    "upvotes": 12,
+    "downvotes": 2,
+    "replies": []
+  },
+  {
+    "id": "c4",
+    "scriptId": "esp-universal",
+    "author": "GhostAim",
+    "text": "Works on literally every game I've tested. The health bars are a nice touch.",
+    "date": "2026-05-22",
+    "upvotes": 19,
+    "downvotes": 0,
+    "replies": [
+      {
+        "id": "r3",
+        "author": "DM_Dev",
+        "text": "We're adding distance-based color gradients in the next update. Stay tuned.",
+        "date": "2026-05-22",
+        "upvotes": 8,
+        "downvotes": 0
+      }
+    ]
+  },
+  {
+    "id": "c5",
+    "scriptId": "esp-universal",
+    "author": "VaultHunter",
+    "text": "FPS drops a bit with 20+ players visible. Any way to optimize?",
+    "date": "2026-05-19",
+    "upvotes": 6,
+    "downvotes": 1,
+    "replies": []
+  },
+  {
+    "id": "c6",
+    "scriptId": "aimbot-fps",
+    "author": "ProSniper",
+    "text": "The smoothing is perfect. Doesn't look suspicious at all. FOV at 100 is the sweet spot.",
+    "date": "2026-05-23",
+    "upvotes": 31,
+    "downvotes": 3,
+    "replies": [
+      {
+        "id": "r4",
+        "author": "PhantomDev",
+        "text": "Thanks! We spent a lot of time tuning the smoothing curves to feel natural.",
+        "date": "2026-05-23",
+        "upvotes": 12,
+        "downvotes": 0
+      }
+    ]
+  },
+  {
+    "id": "c7",
+    "scriptId": "speed-boost",
+    "author": "PetCollector",
+    "text": "2.5x is the safe zone. Tried 4x and got kicked after 5 min lol",
+    "date": "2026-05-17",
+    "upvotes": 14,
+    "downvotes": 0,
+    "replies": []
+  },
+  {
+    "id": "c8",
+    "scriptId": "auto-collect",
+    "author": "MM2Trader",
+    "text": "This saved me so much time during events. Auto-collects event items too.",
+    "date": "2026-05-16",
+    "upvotes": 9,
+    "downvotes": 1,
+    "replies": []
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(node *)",
+      "Bash(curl *)",
+      "Bash(ps -W)",
+      "Bash(tasklist)",
+      "Bash(findstr /I node.exe)",
+      "Read(//c/Users/sadap/Documents/GitHub/eclipse-api/**)",
+      "Read(//c/Users/sadap/Documents/GitHub/eclipse-api/src/**)",
+      "Bash(awk 'NR==183 { for\\(i=1;i<=length\\($0\\);i++\\) printf \"%02x \", ord\\(substr\\($0,i,1\\)\\); print \"\" } function ord\\(c\\) { return sprintf\\(\"%d\", index\\(\"\\\\x00\\\\x01\\\\x02\\\\x03\\\\x04\\\\x05\\\\x06\\\\x07\\\\x08\\\\x09\\\\x0a\\\\x0b\\\\x0c\\\\x0d\\\\x0e\\\\x0f\\\\x10\\\\x11\\\\x12\\\\x13\\\\x14\\\\x15\\\\x16\\\\x17\\\\x18\\\\x19\\\\x1a\\\\x1b\\\\x1c\\\\x1d\\\\x1e\\\\x1f !\\\\\"#$%&'\\\\''\\(\\)*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\\\\\\\]^_\\\\x60abcdefghijklmnopqrstuvwxyz{|}~\", c\\) - 1\\) }' \"C:\\\\Users\\\\sadap\\\\Documents\\\\GitHub\\\\eclipse-api\\\\docs\\\\superpowers\\\\plans\\\\2026-05-24-security-hardening.md\")",
+      "Bash(npm test *)",
+      "Bash(npx prisma *)",
+      "Bash(tasklist //FI \"IMAGENAME eq node.exe\")",
+      "Bash(wmic process *)",
+      "PowerShell(Get-CimInstance *)",
+      "PowerShell($target = 'C:\\\\Users\\\\sadap\\\\Documents\\\\GitHub\\\\eclipse-api\\\\node_modules\\\\.prisma\\\\client\\\\query_engine-windows.dll.node'; Get-Process | ForEach-Object { try { $p = $_; $_.Modules | Where-Object { $_.FileName -eq $target } | ForEach-Object { [PSCustomObject]@{ Pid = $p.Id; Name = $p.ProcessName } } } catch {} })",
+      "Bash(npm uninstall *)",
+      "Bash(PORT=4099 timeout 4 node src/index.js)",
+      "Bash(echo \"exit=$?\")",
+      "PowerShell(Get-NetTCPConnection *)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill *)",
+      "Bash(npx eslint *)",
+      "Bash(npx vitest *)",
+      "Read(//tmp/**)",
+      "Bash(grep -E \"\\\\.env$|\\\\.test\\\\.\")"
+    ]
+  }
+}

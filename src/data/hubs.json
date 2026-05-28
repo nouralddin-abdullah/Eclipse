@@ -1,0 +1,62 @@
+[
+  {
+    "id": "eclipse-core",
+    "name": "Eclipse Core",
+    "status": "online",
+    "description": "The flagship executor featuring auto-inject, a built-in script library, and a premium interface designed for seamless execution across all supported games.",
+    "discordUrl": "#",
+    "websiteUrl": "#",
+    "imageUrl": "/assets/hubs/eclipse-core.png",
+    "followers": 12400
+  },
+  {
+    "id": "nova-hub",
+    "name": "Nova Hub",
+    "status": "online",
+    "description": "A lightweight hub built for speed and stealth. Minimal footprint with maximum performance, optimized for competitive environments.",
+    "discordUrl": "#",
+    "websiteUrl": "#",
+    "imageUrl": "/assets/hubs/nova-hub.png",
+    "followers": 5800
+  },
+  {
+    "id": "phantom-x",
+    "name": "Phantom X",
+    "status": "online",
+    "description": "An advanced hub featuring a fully custom UI, macro recording system, and multi-script execution. Built for power users who demand full control.",
+    "discordUrl": "#",
+    "websiteUrl": "#",
+    "imageUrl": "/assets/hubs/phantom-x.png",
+    "followers": 9200
+  },
+  {
+    "id": "velocity",
+    "name": "Velocity",
+    "status": "updating",
+    "description": "Performance-optimized hub engineered for competitive play. Features low-latency injection and real-time script profiling tools.",
+    "discordUrl": "#",
+    "websiteUrl": "#",
+    "imageUrl": "/assets/hubs/velocity.png",
+    "followers": 4300
+  },
+  {
+    "id": "zenith",
+    "name": "Zenith",
+    "status": "online",
+    "description": "The beginner-friendly hub with guided setup, one-click execution, and an intuitive interface. Perfect for users new to scripting.",
+    "discordUrl": "#",
+    "websiteUrl": "#",
+    "imageUrl": "/assets/hubs/zenith.png",
+    "followers": 3100
+  },
+  {
+    "id": "dark-matter",
+    "name": "Dark Matter",
+    "status": "online",
+    "description": "Enterprise-grade hub with multi-game support, session persistence, and advanced obfuscation. The most comprehensive tool in the ecosystem.",
+    "discordUrl": "#",
+    "websiteUrl": "#",
+    "imageUrl": "/assets/hubs/dark-matter.png",
+    "followers": 15700
+  }
+]

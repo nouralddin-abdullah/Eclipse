@@ -1,0 +1,11 @@
+# Eclipse — robots.txt
+# https://eclipserblx.com
+
+User-agent: *
+Allow: /
+
+# Sitemap — served by Cloudflare Worker (fetches from backend)
+Sitemap: https://eclipserblx.com/sitemap.xml
+
+# Block private/auth pages from indexing
+Disallow: /profile

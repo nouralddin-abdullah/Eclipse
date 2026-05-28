@@ -1,0 +1,21 @@
+name = "eclipse-seo-worker"
+main = "seo-worker.js"
+compatibility_date = "2024-11-12"
+
+# Environment variables
+[vars]
+API_URL = "https://api.eclipserblx.com"
+BASE_URL = "https://eclipserblx.com"
+
+# Routes — intercept bot-crawlable pages and sitemap
+[[routes]]
+pattern = "eclipserblx.com/hubs/*"
+zone_name = "eclipserblx.com"
+
+[[routes]]
+pattern = "eclipserblx.com/scripts/*"
+zone_name = "eclipserblx.com"
+
+[[routes]]
+pattern = "eclipserblx.com/sitemap.xml"
+zone_name = "eclipserblx.com"

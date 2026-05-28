@@ -1,0 +1,38 @@
+[
+  {
+    "id": "showcase-1",
+    "youtubeId": "dQw4w9WgXcQ",
+    "title": "Eclipse Core v2.4 — Full Feature Showcase",
+    "publishDate": "2026-05-20",
+    "thumbnailUrl": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    "hubIds": ["eclipse-core"],
+    "scriptIds": ["auto-farm-blox", "esp-universal"]
+  },
+  {
+    "id": "showcase-2",
+    "youtubeId": "dQw4w9WgXcQ",
+    "title": "Nova Hub Speed Test — Pet Sim X",
+    "publishDate": "2026-05-15",
+    "thumbnailUrl": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    "hubIds": ["nova-hub"],
+    "scriptIds": ["speed-boost"]
+  },
+  {
+    "id": "showcase-3",
+    "youtubeId": "dQw4w9WgXcQ",
+    "title": "Phantom X Macro System Deep Dive",
+    "publishDate": "2026-05-10",
+    "thumbnailUrl": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    "hubIds": ["phantom-x"],
+    "scriptIds": ["aimbot-fps"]
+  },
+  {
+    "id": "showcase-4",
+    "youtubeId": "dQw4w9WgXcQ",
+    "title": "Dark Matter v4.0 — Multi-Game Support",
+    "publishDate": "2026-05-05",
+    "thumbnailUrl": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    "hubIds": ["dark-matter"],
+    "scriptIds": ["auto-collect", "esp-universal"]
+  }
+]
