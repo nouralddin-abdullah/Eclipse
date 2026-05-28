@@ -8,7 +8,7 @@ import { useGameSearch } from '../../hooks/useGameSearch'
  * games list when search is empty.
  *
  * Props:
- *   gameIcons – Map<gameName, { iconUrl }> from useGameThumbnails
+ *   gameIcons – Map<gameName, { iconUrl }> built from useGameAssetsBatch results
  */
 const GameSearchFilter = ({
   value,

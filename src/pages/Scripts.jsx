@@ -2,7 +2,6 @@ import { useMemo, useState } from 'react'
 import { motion } from 'motion/react'
 import { useScriptsPaged } from '../hooks/useScripts'
 import { useHubs } from '../hooks/useHubs'
-import { useGameThumbnails } from '../hooks/useGameThumbnails'
 import { useGameAssetsBatch } from '../hooks/useGameAssets'
 import { useFilterStore } from '../hooks/useFilterStore'
 import { useDebouncedValue } from '../hooks/useDebouncedValue'
@@ -52,7 +51,6 @@ const Scripts = () => {
 
   const { data: env, isLoading: scriptsLoading } = useScriptsPaged(params)
   const { data: hubs = [], isLoading: hubsLoading } = useHubs({ limit: 100 })
-  const { data: gameThumbnails } = useGameThumbnails()
 
   const scripts = useMemo(() => env?.items ?? [], [env])
   const total = env?.total ?? 0
@@ -62,6 +60,19 @@ const Scripts = () => {
     [scripts]
   )
   const { data: gameAssets } = useGameAssetsBatch(visibleGameIds)
+
+  // Name → { iconUrl } map for the filter dropdown's quick-access list.
+  // Built from the visible scripts so it always matches whatever names
+  // the DB actually stores (no static registry).
+  const gameIcons = useMemo(() => {
+    const map = new Map()
+    for (const s of scripts) {
+      if (!s.targetGame || map.has(s.targetGame)) continue
+      const assets = s.gameId ? gameAssets?.get(Number(s.gameId)) : null
+      map.set(s.targetGame, { iconUrl: assets?.iconUrl || null })
+    }
+    return map
+  }, [scripts, gameAssets])
 
   // Local games for the quick-access list — taken from the visible page
   const localGames = useMemo(() => {
@@ -106,7 +117,7 @@ const Scripts = () => {
             value={gameFilter}
             onChange={onGame}
             localGames={localGames}
-            gameIcons={gameThumbnails}
+            gameIcons={gameIcons}
             className="w-full md:w-64"
           />
           <select

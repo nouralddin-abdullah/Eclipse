@@ -3,9 +3,7 @@ import { fetchGameIcons, fetchGameThumbnails } from '../lib/roblox'
 
 /**
  * Fetch icon + wide thumbnail for a single Roblox universeId.
- * Preferred over useGameThumbnails for any view that already knows the
- * gameId (e.g. script detail / cards). Avoids the brittle name match
- * against the static games.json registry.
+ * Used by views that know the gameId (e.g. script detail).
  */
 export const useGameAssets = (gameId) => {
   const id = gameId ? String(gameId) : null
